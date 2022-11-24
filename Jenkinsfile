@@ -41,7 +41,6 @@ pipeline
                 }
             }
         }
-		/*
         stage('Delete container')
         {
             steps
@@ -55,7 +54,6 @@ pipeline
                 }
             }
         }
-		*/
         stage('Run container')
         {
             steps
@@ -78,7 +76,7 @@ pipeline
                 {
                     bat 'docker cp ./Appsetting/Master/. mqadalink-master:/app'
                     bat 'docker cp ./Appsetting/Sale1/. mqadalink-sale-1:/app'
-                    bat 'docker cp ./Appsetting/Sale2/. mqadalink-sale-1:/app'
+                    bat 'docker cp ./Appsetting/Sale2/. mqadalink-sale-2:/app'
                 }
             }
         }
